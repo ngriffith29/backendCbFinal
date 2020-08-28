@@ -26,8 +26,8 @@ router.get('/:id', getStudent, (req, res) => {
 // create student
 router.post('/', async (req, res) => {
     const student = new Student({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
+        email: req.body.email,
+       grade: req.body.grade,
         assetTag: req.body.assetTag,
      
     })

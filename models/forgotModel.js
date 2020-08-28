@@ -1,12 +1,12 @@
 const mongoose = require('mongoose')
 
 const forgotModel = new mongoose.Schema({
-    firstName: {
+    email: {
         type: String,
         required: true
 
     },
-    lastName: {
+    grade: {
         type: String,
         required: true
     },
