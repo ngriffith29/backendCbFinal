@@ -53,6 +53,7 @@ router.patch('/id', (req, res) => {
 // delete student
 
 router.delete('/:id', getStudent, async (req, res) => {
+    console.log(res.student)
     try{
         await res.student.remove()
         res.json('Deleted Student')
