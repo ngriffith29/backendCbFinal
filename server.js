@@ -16,10 +16,13 @@ app.use(express.json() )
 
 const studentRouter = require('./routes/StudentRoute')
 const forgotRouter = require('./routes/forgot')
+const lifetimeRouter = require('./routes/lifetimedead')
 
 app.use('/students', studentRouter)
 
 app.use('/forgot', forgotRouter)
+
+app.use('/lifetime', lifetimeRouter)
 
 app.listen(3000, () => console.log('server started'))
 
