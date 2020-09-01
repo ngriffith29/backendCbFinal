@@ -15,8 +15,11 @@ const lifeTimeModel = new mongoose.Schema({
     grade: {
         type: Number,
         required: true
+    },
+    email: {
+        type: String,
+        required: true
     }
-
 
 
 

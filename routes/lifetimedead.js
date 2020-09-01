@@ -28,7 +28,8 @@ router.post('/', async (req, res) => {
     const student = new Student({
         assetTag: req.body.assetTag,
         brokeReason: req.body.brokeReason,
-        grade: req.body.grade
+        grade: req.body.grade,
+        email: req.body.email
     })
     try{
         const newStudent = await(student.save())
