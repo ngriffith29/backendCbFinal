@@ -5,7 +5,7 @@ const app = express()
 let port = process.env.PORT || 3000;
 const mongoose = require('mongoose')
 var cors = require('cors')
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://ngriffith29:naG*0782@cbcheckout.wmih8.mongodb.net/<dbname>?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
 db.on('error', (error)  => console.error(error))
 db.once('open', () => console.log('connected to db :)'))
