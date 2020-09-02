@@ -54,6 +54,20 @@ router.patch('/id', (req, res) => {
 // delete student
 
 router.delete('/:id', getStudent, async (req, res) => {
+    const send = require('gmail-send')({
+        user: 'nathan.griffith@bellevueschools.org',
+        pass: 'neogomvcbosuxlhy',
+        to:   res.student.email,
+        subject: 'Pick up your chromebook it is done',
+      });
+
+      send({
+        text:    'Your chromebook is ready to be picked up. This is an automated message replys will not be answered',  
+      }, (error, result, fullResult) => {
+        if (error) console.error(error);
+        console.log(result);
+      })
+
     console.log(res.student)
     try{
         await res.student.remove()
