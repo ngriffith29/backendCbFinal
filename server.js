@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express')
 
 const app = express()
-
+let port = process.env.PORT || 3000;
 const mongoose = require('mongoose')
 var cors = require('cors')
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -24,5 +24,5 @@ app.use('/forgot', forgotRouter)
 
 app.use('/lifetime', lifetimeRouter)
 
-app.listen(3000, () => console.log('server started'))
+app.listen(port, () => console.log('server started'))
 
