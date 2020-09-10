@@ -62,7 +62,7 @@ router.delete('/:id', getStudent, async (req, res) => {
       });
 
       send({
-        text:    'Your chromebook is ready to be picked up. This is an automated message replys will not be answered',  
+        text:    'Your chromebook is ready to be picked up. This is an automated message do not respone',  
       }, (error, result, fullResult) => {
         if (error) console.error(error);
         console.log(result);
